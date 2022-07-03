@@ -1,7 +1,7 @@
 // If there is no license, return an empty string
 // function to generate markdown for README
-function licenseBadge(data) {
-  const licenseType = data.license[0];
+licenseBadge = (data) => {
+  const licenseType = data.license;
   let licenseString = " "
   if (licenseType === "MIT") {
     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
@@ -18,35 +18,48 @@ function licenseBadge(data) {
 return licenseString;
 };
 
+const languagesUsed = (data) => {
+ var listLanguages = data.languages.join('<br>')
+ return listLanguages
+}
+
 function generateMarkdown(data) {
-    return `# ${data.projectTitle}
-        ## Table of Contents:
-          1. [Description](#description) 
-          2. [Installation](#installation)
-          3. [Usage](#usage)  
-          4. [Contributing](#contributing)
-          5. [Tests](#tests)
-          6. [License](#license)
-          7. [GitHub](#github)
-          8. [E-mail](#E-mail)
-        ## Description
-        ${data.description} 
-        ## Installation
-        ${data.installation}
-        ## Usage
-        ${data.usage}
-        ## Contributing
-        ${data.contributing}
-        ## Tests
-        ${data.tests}
-        ## License
-        ${licenseBadge(data)}
-        ##Questions?
-        Please reach out via:
-        ### GitHub
-        ${data.github}
-        ### E-mail
-        ${data.email}
+    return `
+# ${data.projectTitle}
+${licenseBadge(data)}
+## Table of Contents:
+1. [Description](#description) 
+2. [Installation](#installation)
+3. [Usage](#usage)  
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Technologies](#technologies)
+7. [License](#license)
+8. [Questions?](#questions)
+## Description
+${data.description} 
+## Installation
+${data.installation}
+## Usage
+${data.usage}
+## Contributing
+${data.contributing}
+## Tests
+${data.tests}
+## Technologies
+${languagesUsed(data)}
+## License
+${licenseBadge(data)}
+<br />
+This application is covered by the [${data.license}](https://choosealicense.com/licenses/) license.
+## Questions
+Please reach out via:
+- **GitHub:**
+  **[${data.github}](https://github.com/${data.github})**
+- **E-mail:**
+  **${data.email}**
     `;
 }
+
 module.exports = generateMarkdown;
+

@@ -1,12 +1,14 @@
 // Declaring the dependencies and variables
 const fs = require("fs");
-const util = require("util");
+//const util = require("util");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js")
-const writeFileAsync = util.promisify(fs.writeFile);
+
+const fileName = "README.md";
+//const writeFileAsync = util.promisify(fs.writeFile);
 
 //Prompt the user questions to populate the README.md
-function promptUser(){
+const promptUser = () => {
     return inquirer.prompt([
         {
             type: "input",
@@ -22,6 +24,12 @@ function promptUser(){
             type: "input",
             name: "installation",
             message: "Describe the installation process if any: ",
+        },
+        {
+            type: 'checkbox',
+            name: 'languages',
+            message: 'What did you build this project with? (Check all that apply)',
+            choices: ['JavaScript', 'HTML', 'CSS', 'ES6', 'jQuery', 'Bootstrap', 'Node']
         },
         {
             type: "input",
@@ -58,21 +66,28 @@ function promptUser(){
             name: "email",
             message: "Please enter your email: "
         }
-    ]);
+    ])
 } 
 
-// Async function using util.promisify 
-async function init() {
-    try {
-        // Ask user questions and generate responses
-        const answers = await promptUser();
-        const generateContent = generateMarkdown(answers);
-        // Write new README.md to dist directory
-        await writeFileAsync('./dist/README.md', generateContent);
-        console.log('✔️  Successfully wrote to README.md');
-    }   catch(err) {
-        console.log(err);
-    }
-  }
-  
-  init();  
+
+function writeToFile(fileName, data) {
+    // Create Markdown from data
+    const markdown = generateMarkdown(data);
+    // Write Markdown file
+    fs.writeFile(fileName, markdown, function (err) {
+        if (err) throw err;
+        console.log("README created! check the dist folder 😊");
+    });
+}
+
+init = () =>{
+    promptUser()
+        .then(data => {
+            writeToFile (fileName,data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+}
+
+init();
