@@ -50,12 +50,7 @@ function promptUser(){
         },
         {
             type: "input",
-            name: "questions",
-            message: "What do I do if I have an issue? "
-        },
-        {
-            type: "input",
-            name: "username",
+            name: "github",
             message: "Please enter your GitHub username: "
         },
         {

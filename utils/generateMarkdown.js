@@ -19,15 +19,15 @@ return licenseString;
 };
 
 function generateMarkdown(data) {
-    return `# ${data.title}
+    return `# ${data.projectTitle}
         ## Table of Contents:
           1. [Description](#description) 
-          2. [Installation](#Installation)
-          3. [Usage](#Usage)  
-          4. [Contributing](#Contributing)
-          5. [Tests](#Tests)
-          6. [License](#License)
-          7. [GitHub](#GitHub)
+          2. [Installation](#installation)
+          3. [Usage](#usage)  
+          4. [Contributing](#contributing)
+          5. [Tests](#tests)
+          6. [License](#license)
+          7. [GitHub](#github)
           8. [E-mail](#E-mail)
         ## Description
         ${data.description} 
@@ -41,9 +41,11 @@ function generateMarkdown(data) {
         ${data.tests}
         ## License
         ${licenseBadge(data)}
-        ## GitHub
+        ##Questions?
+        Please reach out via:
+        ### GitHub
         ${data.github}
-        ## E-mail
+        ### E-mail
         ${data.email}
     `;
 }
