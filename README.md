@@ -28,7 +28,9 @@
 ## Recording
 [How to create the README file.webm](https://user-images.githubusercontent.com/64149102/177218513-2371f654-3168-435d-b236-f434ac43116a.webm)
 ## Contributing
-Leonel Mancera Pinzon
+Contributions are more than welcome because we can learn, inspire, and create. Any contributions you make are greatly appreciated.
+Please reach out to me before making any changes.
+Thank you! 😊
 ## Technologies
 JavaScript<br>HTML<br>ES6<br>Node
 ## License
