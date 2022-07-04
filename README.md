@@ -3,7 +3,7 @@
 1. [Description](#description) 
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [Recording](#recording)
+4. [Walkthrough](#walkthrough)
 5. [Contributing](#contributing)
 6. [Technologies](#technologies)
 7. [License](#license)
@@ -25,7 +25,7 @@ Tired of creating Readme.md files all the time? Use this app to create a profess
 7. Have fun!🤘
 ## Usage
 The application is designed to run within the command-line. Once you have installed the program and run 'node index.js' in commandand and begin answering questions to update the README content. After that you will receive a success message and the README will be generated within the 'dist' folder.
-## Recording
+## Walkthrough
 [How to create the README file.webm](https://user-images.githubusercontent.com/64149102/177218513-2371f654-3168-435d-b236-f434ac43116a.webm)
 ## Contributing
 Contributions are more than welcome because we can learn, inspire, and create. Any contributions you make are greatly appreciated.
