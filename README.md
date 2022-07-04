@@ -10,7 +10,7 @@
 8. [Questions?](#questions)
 
 ## Description
-'Tired of creating Readme.md files all the time? Use this app to create a professional Readme in less than 2 minutes!'
+Tired of creating Readme.md files all the time? Use this app to create a professional Readme in less than 2 minutes!
 ## Installation
 1. Clone the repo
    > git clone https://github.com/Leman102/README-generator.git
@@ -24,7 +24,7 @@
 6. Answer the questions
 7. Have fun!🤘
 ## Usage
-"The application is designed to run within the command-line. Once you have installed the program and run 'node index.js' in commandand and begin answering questions to update the README content. After that you will receive a success message and the README will be generated within the 'dist' folder."
+The application is designed to run within the command-line. Once you have installed the program and run 'node index.js' in commandand and begin answering questions to update the README content. After that you will receive a success message and the README will be generated within the 'dist' folder.
 ## Recording
 [How to create the README file.webm](https://user-images.githubusercontent.com/64149102/177218513-2371f654-3168-435d-b236-f434ac43116a.webm)
 ## Contributing
