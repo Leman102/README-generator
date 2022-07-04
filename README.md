@@ -13,14 +13,14 @@
 'Tired of creating Readme.md files all the time? Use this app to create a professional Readme in less than 2 minutes!'
 ## Installation
 1. Clone the repo
-> git clone https://github.com/Leman102/README-generator.git
+   > git clone https://github.com/Leman102/README-generator.git
 2. Open the index.js file
 3. Install node.js using command-line
-> npm init
-4. Install Inquirer 
-> npm install inquirer@8.2.4
-5. Run the app
-> node index.js
+   > npm init
+4. Install Inquirer using command-line
+   > npm install inquirer@8.2.4
+5. Run the app using command-line
+   > node index.js
 6. Answer the questions
 7. Have fun!🤘
 ## Usage
