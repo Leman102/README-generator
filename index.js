@@ -1,11 +1,9 @@
 // Declaring the dependencies and variables
 const fs = require("fs");
-//const util = require("util");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js")
 
-const fileName = "README.md";
-//const writeFileAsync = util.promisify(fs.writeFile);
+
 
 //Prompt the user questions to populate the README.md
 const promptUser = () => {
@@ -76,14 +74,14 @@ function writeToFile(fileName, data) {
     // Write Markdown file
     fs.writeFile(fileName, markdown, function (err) {
         if (err) throw err;
-        console.log("README created! check the dist folder 😊");
+        console.log("README created! check the 'dist' folder 😊");
     });
 }
 
 init = () =>{
     promptUser()
         .then(data => {
-            writeToFile (fileName,data)
+            writeToFile ('./dist/README.md',data)
         })
         .catch(err => {
             console.log(err)

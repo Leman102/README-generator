@@ -1,5 +1,4 @@
 // If there is no license, return an empty string
-// function to generate markdown for README
 licenseBadge = (data) => {
   const licenseType = data.license;
   let licenseString = " "
@@ -18,15 +17,16 @@ licenseBadge = (data) => {
 return licenseString;
 };
 
+//create the list of languages used on the project
 const languagesUsed = (data) => {
  var listLanguages = data.languages.join('<br>')
  return listLanguages
 }
 
+// function to generate markdown for README
 function generateMarkdown(data) {
     return `
-# ${data.projectTitle}
-${licenseBadge(data)}
+# ${data.projectTitle}  ${licenseBadge(data)}
 ## Table of Contents:
 1. [Description](#description) 
 2. [Installation](#installation)
