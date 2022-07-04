@@ -12,7 +12,7 @@
 ## Description
 'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.' 
 ## Installation
-Step 1 step2 step3
+Step 1 Step 2 Step 3
 ## Usage
 Create a new README file
 ## Contributing
